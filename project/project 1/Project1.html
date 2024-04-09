@@ -4,13 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shylesheet" src="project1.css">
+    <link rel="shylesheet" href="project1.css">
+    <style>
+    
+    .root{
+        --hue-neutral :200;
+        --hue-wrong :0;
+        --hue-correct: 45;
+    }
+    
+    body{
+        --hue: var(--hue-neutral);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vw;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(var(--hue), 100% ,20%);
+        background:#005a80;
+    }
+
+    body.correct{
+    --hue :var(--hue-correct)
+}
+
+body.wrong{
+    --hue :var(--hue-wrong)
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 20px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
+
+}
+
+.btn{
+    --hue:var(--hue-nuutral);
+    border: 1px dakrblack;
+    background-color:  rgb(63, 174, 211);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color:white;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border-color:black;
+}
+
+.start-btn,
+.next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hide{
+    display: none;
+}
+    </style>
 </head>
 <body>
     <div class="container">
         <div id="question-container" class="hide">
-           <div id="answer-buttons" class="
-           btn-grid"> 
+           <div id="answer-buttons" class="btn-grid">
+            
               <button class="btn"> Answer 1</button>
               
               <button class="btn"> Answer 2</button>

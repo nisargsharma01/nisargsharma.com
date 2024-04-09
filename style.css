@@ -291,6 +291,11 @@ section {
 .column{
     flex: 1 1 30rem;
 }
+
+.more-project{
+    font-size: 1.6rem;
+}
+
 .education-content{
     padding:1rem 2.9rem;
     border: .2rem solid #424242;

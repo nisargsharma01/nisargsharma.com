@@ -292,10 +292,15 @@ section {
     flex: 1 1 30rem;
 }
 
-.more-project{
-    font-size: 1.6rem;
+.more-project h3{
+    font-size: 5rem;
 }
-
+.more-project h4{
+    font-size: 2rem;
+}
+.more-project p{
+    font-size: 3.5rem;
+}
 .education-content{
     padding:1rem 2.9rem;
     border: .2rem solid #424242;

@@ -10,6 +10,30 @@ let shuffledQuestions,currectQuestionIndex;
 let quizScore =0;
 
 
+function startGame(){
+    startButton.classList.add('hide')
+    shuffledQuestions=question.sort() =>Math.random
+}
+
+function setnextQuestion{
+    resetstate();
+    showQuestion(shuffledQuestions[currectQuestionIndex])
+}
+
+functionshowQuestion(question){
+    questionElement.innerText= question=question;
+    question.answer.forEach((answer) =>{
+        const button =document.createElement('button')
+        button.innerText=answer.text;
+        button.classList.add('btn')
+        if(answer.correct) {
+            button.datset.correct =answer.correct
+        }
+        button.addEventListener('click',selectAnswer)
+        answerButtonElement.appendChild(button)
+    })
+}
+
 function showQuestion(question) {
     questionElement.innerText= question=question;
     question.answer.forEach(answer) =>{
